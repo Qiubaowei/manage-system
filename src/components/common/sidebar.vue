@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
         <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" theme="dark" unique-opened router>
-            <el-menu-item index="readme">
+            <el-menu-item index="home">
                 <i class="el-icon-setting"></i>自述
             </el-menu-item>
             <el-submenu index="2">
@@ -28,6 +28,7 @@
     export default {
         computed:{
             onRoutes(){
+                console.warn(this.$route.path)
                 console.warn(this.$route.path.replace('/',''))
                 return this.$route.path.replace('/','');
             }
